@@ -1,5 +1,8 @@
 package com.json.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Person {
 
 	private int id;
@@ -9,6 +12,8 @@ public class Person {
 	private int age;
 	
 	private Phone phones;
+	
+	
 
 	public Person() {
 		super();
@@ -45,6 +50,8 @@ public class Person {
 	public void setPhones(Phone phones) {
 		this.phones = phones;
 	}
+
+	
 	
 	
 }

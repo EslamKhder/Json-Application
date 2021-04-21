@@ -21,6 +21,6 @@ public class App
     	
     	Person p = map.readValue(new File("info/person.json"), Person.class);
     	System.out.println(p.getId() + " " + p.getName());
-    	System.out.println(p.getAge() + " ");
+    	System.out.println(p.getAge() + " " + p.getPhones().getPh1() + " " + p.getPhones().getCode());
     }
 }
