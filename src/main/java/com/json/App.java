@@ -7,6 +7,7 @@ import java.lang.runtime.ObjectMethods;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.json.model.Person;
 import com.json.model.User;
 /**
  * Hello world!
@@ -18,8 +19,8 @@ public class App
     {
     	ObjectMapper map= new ObjectMapper();
     	
-    	User user = map.readValue(new File("info/user.json"), User.class);
-    	System.out.println(user.getId() + " " + user.getName());
-    	System.out.println(user.getAge() + " " + user.getAddress()[0] + " " + user.getAddress()[1]);
+    	Person p = map.readValue(new File("info/person.json"), Person.class);
+    	System.out.println(p.getId() + " " + p.getName());
+    	System.out.println(p.getAge() + " ");
     }
 }
